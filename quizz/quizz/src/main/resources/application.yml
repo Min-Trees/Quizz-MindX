@@ -1,0 +1,19 @@
+spring:
+  datasource:
+    url: ${SPRING_DATASOURCE_URL:jdbc:postgresql://localhost:5432/quizzdb}
+    username: ${SPRING_DATASOURCE_USERNAME:quizz}
+    password: ${SPRING_DATASOURCE_PASSWORD:quizz}
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        format_sql: true
+  sql:
+    init:
+      mode: always
+server:
+  port: 8080
+logging:
+  level:
+    org.hibernate.SQL: DEBUG
